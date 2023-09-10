@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#calculator {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 355px;
+}
+
+.calc-row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+}
+
+.calc-button {
+    border-radius: 50px;
+    font-size: 28px;
+    height: 80px;
+    width: 80px;
+}
