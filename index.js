@@ -41,6 +41,11 @@ function onDelClick() {
     calcDisplayInput.textContent = calcDisplayInput.innerText.slice(0,-1);
 }
 
+function onPercentClick() {
+    let entry = Number(calcDisplayInput.textContent)
+    calcDisplayInput.textContent = entry / 100;
+}
+
 function reset(params) {
     totalDisplayed = true;
     total = 0;
