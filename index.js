@@ -103,3 +103,28 @@ function performCalc(a, b, operator){
             return a;
     }
 }
+
+let numberKeys = new Set(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."]);
+let operatorKeys = new Set(["-", "+", "/", "*", "="]);
+
+document.addEventListener("keypress", e => {
+    let key = e.key.toLowerCase();
+    let wrapped = { textContent: key };
+
+    if (numberKeys.has(key))
+        onNumberPress(wrapped);
+    else if (operatorKeys.has(key))
+        onOperatorPress(wrapped);
+    else if (key == "%")
+        onPercentClick();
+});
+
+document.addEventListener("keydown", e => {
+    let key = e.key.toLowerCase();
+    if (key == "backspace" || key == "delete")
+        onDelClick();
+    if (key == "enter")
+        onOperatorPress({ textContent: "="})
+    if (key == "escape")
+        onCClick();
+});
