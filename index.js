@@ -68,7 +68,7 @@ function onOperatorPress(e) {
         return;
 
     let operator = e.textContent;
-    if (operatorLastClicked) {
+    if (operatorLastClick) {
         lastOperator = operator;
         return;
     }
