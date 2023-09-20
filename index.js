@@ -33,6 +33,14 @@ function onCClick() {
     reset();
 }
 
+function onDelClick() {
+    if (calcDisplayInput.innerText.length == 1)
+        calcDisplayInput.textContent = "0";
+    if (calcDisplayInput.textContent === "0")
+        return;
+    calcDisplayInput.textContent = calcDisplayInput.innerText.slice(0,-1);
+}
+
 function reset(params) {
     totalDisplayed = true;
     total = 0;
